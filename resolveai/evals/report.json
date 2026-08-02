@@ -1,0 +1,149 @@
+{
+  "passed": 5,
+  "total": 5,
+  "accuracy": 1.0,
+  "details": [
+    {
+      "id": "access-approval",
+      "passed": true,
+      "checks": {
+        "status": true,
+        "approval": true,
+        "type": true
+      },
+      "result": {
+        "thread_id": "eval-0",
+        "status": "pending_approval",
+        "message": "The proposed state-changing action requires human approval.",
+        "request_type": "access_request",
+        "risk_level": "high",
+        "evidence_policy_ids": [
+          "POL-ACCESS-004",
+          "POL-GLOBAL-PRIVACY-005"
+        ],
+        "approval_required": true,
+        "ticket": null,
+        "warnings": [],
+        "metrics": {}
+      }
+    },
+    {
+      "id": "incident-auto-ticket",
+      "passed": true,
+      "checks": {
+        "status": true,
+        "approval": true,
+        "type": true
+      },
+      "result": {
+        "thread_id": "eval-1",
+        "status": "completed",
+        "message": "Ticket INC-D278A6D7B2 was created and routed for execution.",
+        "request_type": "incident",
+        "risk_level": "medium",
+        "evidence_policy_ids": [
+          "POL-INCIDENT-003",
+          "POL-GLOBAL-PRIVACY-005"
+        ],
+        "approval_required": false,
+        "ticket": {
+          "ticket_id": "INC-D278A6D7B2",
+          "idempotency_key": "546b6ffa53fed75c3db243dd5d92a754de0c632080bb20b22e588e8f36c7abbf",
+          "requester_id": "usr-1001",
+          "category": "incident",
+          "summary": "Incident for revenue-pipeline",
+          "status": "open",
+          "created_at": "2026-08-02T20:17:37.943696Z"
+        },
+        "warnings": [],
+        "metrics": {
+          "latency_seconds": 0.002213,
+          "policy_hits": 2
+        }
+      }
+    },
+    {
+      "id": "policy-readonly",
+      "passed": true,
+      "checks": {
+        "status": true,
+        "approval": true,
+        "type": true
+      },
+      "result": {
+        "thread_id": "eval-2",
+        "status": "completed",
+        "message": "Resolution completed using policy evidence: POL-ACCESS-004, POL-GLOBAL-PRIVACY-005, POL-INCIDENT-003.",
+        "request_type": "policy_question",
+        "risk_level": "low",
+        "evidence_policy_ids": [
+          "POL-ACCESS-004",
+          "POL-GLOBAL-PRIVACY-005",
+          "POL-INCIDENT-003"
+        ],
+        "approval_required": false,
+        "ticket": null,
+        "warnings": [],
+        "metrics": {
+          "latency_seconds": 0.000355,
+          "policy_hits": 4
+        }
+      }
+    },
+    {
+      "id": "blocked-injection",
+      "passed": true,
+      "checks": {
+        "status": true,
+        "approval": true,
+        "type": true
+      },
+      "result": {
+        "thread_id": "eval-3",
+        "status": "blocked",
+        "message": "The request was blocked by input security controls.",
+        "request_type": null,
+        "risk_level": null,
+        "evidence_policy_ids": [],
+        "approval_required": false,
+        "ticket": null,
+        "warnings": [
+          "prompt_injection_pattern"
+        ],
+        "metrics": {
+          "latency_seconds": 3.3e-05,
+          "policy_hits": 0
+        }
+      }
+    },
+    {
+      "id": "inactive-user",
+      "passed": true,
+      "checks": {
+        "status": true,
+        "approval": true,
+        "type": true
+      },
+      "result": {
+        "thread_id": "eval-4",
+        "status": "escalated",
+        "message": "The action was not authorized and has been escalated for manual review.",
+        "request_type": "access_request",
+        "risk_level": "high",
+        "evidence_policy_ids": [
+          "POL-ACCESS-004",
+          "POL-GLOBAL-PRIVACY-005"
+        ],
+        "approval_required": false,
+        "ticket": null,
+        "warnings": [
+          "requester_not_active"
+        ],
+        "metrics": {
+          "latency_seconds": 0.000297,
+          "policy_hits": 3
+        }
+      }
+    }
+  ]
+}

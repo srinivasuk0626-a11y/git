@@ -1,0 +1,47 @@
+[
+  {
+    "user_id": "usr-1001",
+    "display_name": "Jordan Lee",
+    "department": "analytics",
+    "manager_id": "manager-2001",
+    "employment_status": "active",
+    "entitlements": [
+      "analytics-read",
+      "dev-workspace"
+    ],
+    "risk_flags": []
+  },
+  {
+    "user_id": "usr-1002",
+    "display_name": "Casey Morgan",
+    "department": "analytics",
+    "manager_id": "manager-2001",
+    "employment_status": "active",
+    "entitlements": [
+      "analytics-read"
+    ],
+    "risk_flags": [
+      "identity_under_review"
+    ]
+  },
+  {
+    "user_id": "usr-3001",
+    "display_name": "Taylor Kim",
+    "department": "marketing",
+    "manager_id": "manager-4001",
+    "employment_status": "active",
+    "entitlements": [
+      "crm-user"
+    ],
+    "risk_flags": []
+  },
+  {
+    "user_id": "usr-9001",
+    "display_name": "Former Employee",
+    "department": "analytics",
+    "manager_id": null,
+    "employment_status": "inactive",
+    "entitlements": [],
+    "risk_flags": []
+  }
+]
